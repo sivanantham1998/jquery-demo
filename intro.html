@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Jquery intro
+    </title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1 id="test"></h1>
+    <ol>
+        <li class="demo"></li>
+    </ol>
+    <p></p>
+    <script>
+        $(document).ready(function () {
+            let test = $("#test")
+            console.log(test)
+            test.text("Hi welcome");
+            test.css("background-color", "wheat")
+            test.css("color", "white")
+            // test.css("display", "none")
+            let demo = $(".demo")
+            demo.text("Thanks for visit");
+            let para = $("p")
+            para.text("paragraph");
+
+        })
+    </script>
+</body>
+
+</html>

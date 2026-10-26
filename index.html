@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+</head>
+
+<body>
+
+    <h1 id="head_1"></h1>
+    <ol>
+        <li class="list_1"></li>
+    </ol>
+    <div id="accordion">
+        <h3>Section 1</h3>
+        <div>
+            <p>
+                Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+                ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+                amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+                odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+            </p>
+        </div>
+        <h3>Section 2</h3>
+        <div>
+            <p>
+                Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+                purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+                velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+                suscipit faucibus urna.
+            </p>
+        </div>
+
+
+    </div>
+
+    <form action="">
+        <button type="submit">Save</button>
+        <a href="">Demo</a>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js"></script>
+    <script>
+        $("document").ready(function () {
+            $("#head_1").text("Welcome");
+            $(".list_1").text("Html")
+            $("#head_1").css("color", "red");
+            $(".list_1").css("background-color", "wheat");
+            $("body").css("background-color", "black")
+            $("body").css("color", "white");
+            $(".list_1").click(function () {
+                alert("Body clicked")
+            })
+
+            $(function () {
+                $("#accordion").accordion();
+            });
+
+            $("button,a").click(function (e) {
+                e.preventDefault()
+            })
+        })
+    </script>
+</body>
+
+</html>

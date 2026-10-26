@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js"></script>
+
+    <style>
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <h1>Welcome to jquery</h1>
+        <p>Thanks for visit</p>
+    </div>
+    <button>Click</button>
+
+    <script>
+        $("button").click(function () {
+            $("#main").addClass("dark-mode", 1500, a)
+        })
+
+        function a() {
+            setTimeout(function () {
+                $("#main").removeClass("dark-mode")
+            }, 3000)
+        }
+    </script>
+</body>
+
+</html>

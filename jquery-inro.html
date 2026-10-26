@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@4.0.0/dist/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <button id="btn">
+        Click
+    </button>
+    <p id="para"></p>
+    <input type="text" id="username" placeholder="enter name here......">
+    <p id="res"></p>
+    <form action="" id="form">
+        <input type="text" id="email" placeholder="enter email">
+        <span id="error"></span>
+        <button type="submit">Save</button>
+    </form>
+    <script>
+        $(document).ready(function () {
+            $("#btn").on("click", function () {
+                $("#para").text("Button Clicked")
+            })
+            $("#btn").on("dblclick", function () {
+                $("#para").text("Button Double Clicked")
+            })
+            $("#username").on("keyup", function () {
+                let name = $(this).val();
+                $("#res").text(name)
+            })
+
+            $("#form").on("submit", function (e) {
+                e.preventDefault()
+                let name = $(this).val()
+
+                if (!name) {
+                    $("#error").text("Please enter valid details")
+                }
+                else {
+                    $("#error").text(" ")
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
